@@ -13,6 +13,7 @@ import { AxesHelper } from 'three'
 // Debug
 const gui = new GUI({ width: 340 })
 const debugObject = {}
+gui.hide()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -60,10 +61,9 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(0, 10, 0)
+camera.position.set(0, 0, 10)
 scene.add(camera)
 
-scene.add(new AxesHelper(1))
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
@@ -229,7 +229,7 @@ gltfLoader.load('/models/creative_text.glb', gltf => {
     }
     setTimeout(() => {
         initAnimation()
-    }, 1000);
+    }, 3000);
 })
 
 
