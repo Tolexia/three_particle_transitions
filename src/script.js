@@ -89,7 +89,7 @@ renderer.setClearColor(debugObject.clearColor)
  */
 let particles = null
 
-gltfLoader.load('/models/creative_text.glb', gltf => {
+gltfLoader.load('./models/creative_text.glb', gltf => {
 
     console.log(gltf);
 
